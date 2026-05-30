@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Circus Familiedag – Kandidaten</title>
+<link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lilita+One&family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red:#D62B2B; --yellow:#F5C518; --blue:#1B5EBF; --green:#2A8C3F;
+    --orange:#E87B1E; --purple:#7B3FA0; --cream:#FFF8DC; --dark:#1A1A1A;
+  }
+  html { background: #111; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    max-width: 860px; margin: 0 auto; overflow-x: hidden;
+  }
+  .tent-top {
+    height: 60px;
+    background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 40px, #fff 40px, #fff 80px);
+    position: relative;
+  }
+  .tent-top::after {
+    content:''; position:absolute; bottom:-20px; left:0; right:0; height:40px;
+    background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 40px, #fff 40px, #fff 80px);
+    clip-path: polygon(0 0,2.5% 100%,5% 0,7.5% 100%,10% 0,12.5% 100%,15% 0,17.5% 100%,20% 0,22.5% 100%,25% 0,27.5% 100%,30% 0,32.5% 100%,35% 0,37.5% 100%,40% 0,42.5% 100%,45% 0,47.5% 100%,50% 0,52.5% 100%,55% 0,57.5% 100%,60% 0,62.5% 100%,65% 0,67.5% 100%,70% 0,72.5% 100%,75% 0,77.5% 100%,80% 0,82.5% 100%,85% 0,87.5% 100%,90% 0,92.5% 100%,95% 0,97.5% 100%,100% 0);
+  }
+  .ticker {
+    background:var(--dark); color:var(--yellow);
+    font-family:'Fredoka One',cursive; font-size:14px; letter-spacing:2px;
+    padding:8px 0; margin-top:22px; text-align:center;
+  }
+  .hero {
+    background:var(--red);
+    background-image:radial-gradient(circle at 15% 50%,rgba(255,255,255,.08) 0%,transparent 50%),
+                     radial-gradient(circle at 85% 50%,rgba(0,0,0,.12) 0%,transparent 50%);
+    text-align:center; padding:48px 32px 40px; position:relative; overflow:hidden;
+  }
+  .hero::before{content:'🎪';position:absolute;top:10px;left:20px;font-size:60px;opacity:.15;}
+  .hero::after {content:'🎪';position:absolute;top:10px;right:20px;font-size:60px;opacity:.15;}
+  .hero h1 {
+    font-family:'Lilita One',cursive; font-size:clamp(42px,8vw,80px);
+    color:var(--yellow); text-shadow:4px 4px 0 #8B0000,8px 8px 0 rgba(0,0,0,.3);
+    letter-spacing:2px; line-height:1;
+  }
+  .hero .subtitle { font-family:'Boogaloo',cursive; font-size:22px; color:#fff; margin-top:10px; text-shadow:2px 2px 0 rgba(0,0,0,.4); }
+  .hero .mystery  { display:inline-block; font-family:'Fredoka One',cursive; font-size:28px; color:var(--yellow); background:rgba(0,0,0,.35); border:2px solid rgba(255,255,255,.3); border-radius:40px; padding:8px 28px; margin-top:18px; }
+  .content { padding:36px 40px; background:var(--cream); }
+  .intro { font-size:17px; line-height:1.8; color:#333; }
+  .intro .salutation { font-family:'Fredoka One',cursive; font-size:22px; color:var(--purple); display:block; margin-bottom:10px; }
+  .section-title { font-family:'Lilita One',cursive; font-size:28px; color:var(--blue); text-align:center; margin:36px 0 16px; }
+  .section-title::before,.section-title::after{content:'✦';color:var(--yellow);margin:0 12px;}
+  .teams-wrap { border:4px solid var(--dark); border-radius:16px; overflow:hidden; box-shadow:6px 6px 0 var(--dark); margin:0 0 32px; }
+  .team-row { display:grid; grid-template-columns:160px repeat(8,1fr); border-bottom:2px solid rgba(0,0,0,.15); }
+  .team-row:last-child { border-bottom:none; }
+  .team-name { font-family:'Fredoka One',cursive; font-size:14px; color:#fff; display:flex; align-items:center; justify-content:center; padding:10px 8px; text-align:center; line-height:1.2; }
+  .team-member { font-family:'Nunito',sans-serif; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:8px 4px; text-align:center; border-left:1px solid rgba(0,0,0,.1); color:var(--dark); }
+  .team-row:nth-child(odd)  .team-member { background:rgba(255,255,255,.6); }
+  .team-row:nth-child(even) .team-member { background:rgba(255,255,255,.3); }
+  .team-rood   { background:#C0392B; }
+  .team-groen  { background:#27AE60; }
+  .team-blauw  { background:#2980B9; }
+  .team-oranje { background:#E67E22; }
+  .team-paars  { background:#8E44AD; }
+  .clown-box { background:var(--yellow); border:4px solid var(--dark); border-radius:20px; box-shadow:8px 8px 0 var(--dark); padding:28px 32px; margin:32px 0; text-align:center; position:relative; overflow:hidden; }
+  .clown-box::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(0,0,0,.04) 10px,rgba(0,0,0,.04) 20px); }
+  .clown-box h2 { font-family:'Lilita One',cursive; font-size:36px; color:var(--red); text-shadow:3px 3px 0 rgba(0,0,0,.2); position:relative; }
+  .clown-box p  { font-size:16px; line-height:1.7; color:var(--dark); margin-top:12px; position:relative; }
+  .clown-emoji  { font-size:48px; display:block; margin-bottom:8px; }
+  .taglines { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:28px 0; }
+  .tag { font-family:'Fredoka One',cursive; font-size:20px; padding:10px 24px; border-radius:50px; border:3px solid var(--dark); box-shadow:4px 4px 0 var(--dark); }
+  .tag:nth-child(1){background:var(--red);color:#fff;}
+  .tag:nth-child(2){background:var(--purple);color:#fff;}
+  .tag:nth-child(3){background:var(--green);color:#fff;}
+  .ps-box { background:#fff; border:3px solid var(--blue); border-radius:16px; padding:24px 28px; margin:24px 0; box-shadow:5px 5px 0 var(--blue); }
+  .ps-box h3 { font-family:'Fredoka One',cursive; font-size:20px; color:var(--blue); margin-bottom:12px; }
+  .ps-list { list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
+  .ps-list li { background:var(--cream); border:2px solid var(--orange); border-radius:20px; padding:4px 14px; font-size:14px; font-weight:700; color:var(--dark); }
+  .tent-bottom { height:50px; background:repeating-linear-gradient(90deg,var(--red) 0px,var(--red) 40px,#fff 40px,#fff 80px); }
+  .tent-bottom-fringe { height:30px; background:repeating-linear-gradient(90deg,var(--red) 0px,var(--red) 40px,#fff 40px,#fff 80px); clip-path:polygon(0 0,2.5% 100%,5% 0,7.5% 100%,10% 0,12.5% 100%,15% 0,17.5% 100%,20% 0,22.5% 100%,25% 0,27.5% 100%,30% 0,32.5% 100%,35% 0,37.5% 100%,40% 0,42.5% 100%,45% 0,47.5% 100%,50% 0,52.5% 100%,55% 0,57.5% 100%,60% 0,62.5% 100%,65% 0,67.5% 100%,70% 0,72.5% 100%,75% 0,77.5% 100%,80% 0,82.5% 100%,85% 0,87.5% 100%,90% 0,92.5% 100%,95% 0,97.5% 100%,100% 0); transform:scaleY(-1); }
+  * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  @media print {
+    @page { margin: 0; }
+    html, body { width:100%; height:100%; }
+    body { transform-origin: top left; }
+  }
+</style>
+</head>
+<body>
+<div class="tent-top"></div>
+<div class="ticker">🎪 CIRCUS FAMILIEDAG &nbsp;✦&nbsp; 🎠 5 TEAMS, 1 WINNAAR &nbsp;✦&nbsp; 🎡 MAAR WIE IS DE CLOWN? &nbsp;✦&nbsp; 🎭 VERTROUW NIEMAND &nbsp;✦&nbsp; 🃏 BEREID JE VOOR</div>
+<div class="hero">
+  <h1>🎪 CIRCUS FAMILIEDAG 🎪</h1>
+  <div class="subtitle">Lekker de Circusartiest uithangen op het strand!</div>
+  <div class="mystery">🤡 Maar wie is de clown…? 🤡</div>
+</div>
+<div class="content">
+  <p class="intro"><span class="salutation">Lieve artiesten, artiesta en artiestjes,</span>Komend weekend is het zover: <strong>De Circus Familiedag.</strong> We gaan lekker naar het strand waar we allerlei spelletjes gaan spelen. Maarja, wat heb je nou aan spelletjes zonder een klein beetje competitie? Precies. Daarom.</p>
+  <div class="section-title">Jullie zijn verdeeld in 5 teams</div>
+  <div class="teams-wrap">
+    
+    <div class="team-row">
+      <div class="team-name team-rood">🔴<br>TEAM<br>ROOD</div>
+      <div class="team-member">Koen</div><div class="team-member">Sander</div><div class="team-member">Jeske</div><div class="team-member">Roos</div><div class="team-member">Lex</div><div class="team-member">Lotte</div><div class="team-member">Daaf</div><div class="team-member">Morris</div>
+    </div>
+    <div class="team-row">
+      <div class="team-name team-groen">🟢<br>TEAM<br>GROEN</div>
+      <div class="team-member">Roel</div><div class="team-member">Jasper</div><div class="team-member">Kim</div><div class="team-member">Onno</div><div class="team-member">Saar (Berlage)</div><div class="team-member">Teun</div><div class="team-member">Isaac</div><div class="team-member">Mees</div>
+    </div>
+    <div class="team-row">
+      <div class="team-name team-blauw">🔵<br>TEAM<br>BLAUW</div>
+      <div class="team-member">Dennis</div><div class="team-member">Rudy</div><div class="team-member">Krista</div><div class="team-member">Seppe</div><div class="team-member">Ise</div><div class="team-member">Jip</div><div class="team-member">Tom</div><div class="team-member">Sis</div>
+    </div>
+    <div class="team-row">
+      <div class="team-name team-oranje">🟠<br>TEAM<br>ORANJE</div>
+      <div class="team-member">Klaas</div><div class="team-member">Ivanka</div><div class="team-member">Timmi</div><div class="team-member">Melle</div><div class="team-member">Mats</div><div class="team-member">Lynn</div><div class="team-member">Pien</div><div class="team-member">Benjamin</div>
+    </div>
+    <div class="team-row">
+      <div class="team-name team-paars">🟣<br>TEAM<br>PAARS</div>
+      <div class="team-member">Niek</div><div class="team-member">Thomas</div><div class="team-member">Noortje</div><div class="team-member">Siem</div><div class="team-member">Jet</div><div class="team-member">Liz</div><div class="team-member">Boris</div><div class="team-member"></div>
+    </div>
+    <div style="background:#fff;padding:12px 20px;text-align:center;font-family:'Fredoka One',cursive;font-size:14px;border-top:2px solid rgba(0,0,0,.1);">
+      <span style="color:#C0392B;">Laat</span> <span style="color:#27AE60;">zien</span> <span style="color:#2980B9;">bij</span> <span style="color:#E67E22;">welk</span> <span style="color:#8E44AD;">team</span> <span style="color:#C0392B;">je</span> <span style="color:#27AE60;">hoort</span> <span style="color:#2980B9;">en</span> <span style="color:#E67E22;">trek</span> <span style="color:#8E44AD;">iets</span> <span style="color:#C0392B;">aan</span> <span style="color:#27AE60;">(shirt,</span> <span style="color:#2980B9;">zwembroek,</span> <span style="color:#E67E22;">petje</span> <span style="color:#8E44AD;">of</span> <span style="color:#C0392B;">accessoire)</span> <span style="color:#27AE60;">in</span> <span style="color:#2980B9;">jullie</span> <span style="color:#E67E22;">schitterende</span> <span style="color:#8E44AD;">teamkleur!</span>
+    </div>
+  </div>
+  <div class="clown-box">
+    <span class="clown-emoji">🤡</span>
+    <h2>Wie… is… De Clown?</h2>
+    <p>De teams gaan de strijd aan in spellen vol <strong>actie</strong>, <strong>slimheid</strong> en…. <strong>bedrog!</strong> Want niet iedereen in je team gaat voor de winst. In ieder team zit een clown. Is hij of zij nu echt zo onhandig? Of probeert diegene de boel te saboteren?</p>
+  </div>
+  <div class="taglines">
+    <div class="tag">Bereid je voor.</div>
+    <div class="tag">Vertrouw niemand.</div>
+    <div class="tag">Tot zondag! 🌞</div>
+  </div>
+  <div class="ps-box">
+    <h3>📋 PS – Niet vergeten:</h3>
+    <ul class="ps-list">
+      <li>🏖️ Strandhanddoek</li><li>🧺 Picknickkleed</li><li>☀️ Zonnebrand</li>
+      <li>🥤 Drinken</li><li>🥪 Lunch</li><li>⚽ Strandbal</li>
+      <li>🧲 Metaaldetector</li><li>🥏 Frisbee</li>
+      <li>🪁 Vlieger</li><li>🪏 Schep</li><li>🏄 (Mini-)surfplank</li>
+      <li>🎾 Jeu-des-boules</li>
+    </ul>
+  </div>
+</div>
+<div class="tent-bottom-fringe"></div>
+<div class="tent-bottom"></div>
+</body></html>
