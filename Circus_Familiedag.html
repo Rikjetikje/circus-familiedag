@@ -132,6 +132,18 @@
     .score-bar-wrap { display:none; }
   }
 
+
+  .arrow-title { font-family:'Fredoka One',cursive; font-size:18px; color:var(--dark); text-align:center; margin:24px 0 12px; }
+  .arrow-diagram { background:#fff; border:3px solid var(--dark); border-radius:16px; box-shadow:5px 5px 0 var(--dark); padding:16px 20px; margin-bottom:24px; display:flex; flex-direction:column; gap:10px; }
+  .arrow-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .arrow-team-pill { font-family:'Fredoka One',cursive; font-size:13px; color:#fff; border-radius:20px; padding:4px 12px; white-space:nowrap; }
+  .arrow-guess { font-family:'Nunito',sans-serif; font-size:13px; color:#555; white-space:nowrap; }
+  .arrow-correct { font-size:13px; font-weight:800; color:var(--green); }
+  .arrow-wrong { font-size:13px; font-weight:800; color:var(--red); }
+  .arrow-arrow { font-size:18px; color:#999; }
+  .arrow-points { font-family:'Fredoka One',cursive; font-size:13px; color:var(--green); white-space:nowrap; }
+  .arrow-points.self { color:var(--blue); }
+
 </style>
 </head>
 <body>
@@ -203,7 +215,7 @@
     <div class="tag">Tot zondag! 🌞</div>
   </div>
   
-  <div class="score-section-title">Tussenstand</div>
+  <div class="score-section-title">Eindstand</div>
   
   <div class="scoreboard">
     <div class="score-header-row">
@@ -296,6 +308,48 @@
       </div>
     </div>
   </div>
+  
+  <div class="arrow-title">Zo verdeelden de clown-punten zich</div>
+  <div class="arrow-diagram">
+    
+    <div class="arrow-row">
+      <div class="arrow-team-pill" style="background:#C0392B">🔴 Rood</div>
+      <div class="arrow-guess">dacht: <em>Koen</em></div>
+      <div class="arrow-correct">✅ correct!</div>
+           <div class="arrow-points self">+75 voor zichzelf</div>
+    </div>
+    <div class="arrow-row">
+      <div class="arrow-team-pill" style="background:#2980B9">🔵 Blauw</div>
+      <div class="arrow-guess">dacht: <em>Dennis</em></div>
+      <div class="arrow-wrong">❌ fout</div>
+           <div class="arrow-arrow">→</div>
+           <div class="arrow-team-pill" style="background:#27AE60">🟢 Groen</div>
+           <div class="arrow-points">+75</div>
+    </div>
+    <div class="arrow-row">
+      <div class="arrow-team-pill" style="background:#27AE60">🟢 Groen</div>
+      <div class="arrow-guess">dacht: <em>Jasper</em></div>
+      <div class="arrow-wrong">❌ fout</div>
+           <div class="arrow-arrow">→</div>
+           <div class="arrow-team-pill" style="background:#8E44AD">🟣 Paars</div>
+           <div class="arrow-points">+75</div>
+    </div>
+    <div class="arrow-row">
+      <div class="arrow-team-pill" style="background:#8E44AD">🟣 Paars</div>
+      <div class="arrow-guess">dacht: <em>Niek</em></div>
+      <div class="arrow-wrong">❌ fout</div>
+           <div class="arrow-arrow">→</div>
+           <div class="arrow-team-pill" style="background:#E67E22">🟠 Oranje</div>
+           <div class="arrow-points">+75</div>
+    </div>
+    <div class="arrow-row">
+      <div class="arrow-team-pill" style="background:#E67E22">🟠 Oranje</div>
+      <div class="arrow-guess">dacht: <em>Yvanka</em></div>
+      <div class="arrow-correct">✅ correct!</div>
+           <div class="arrow-points self">+75 voor zichzelf</div>
+    </div>
+  </div>
+
 
   <div class="ps-box">
     <h3>📋 PS – Niet vergeten:</h3>
