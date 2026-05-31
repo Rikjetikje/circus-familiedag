@@ -111,7 +111,8 @@
   .scoreboard { border:4px solid var(--dark); border-radius:16px; overflow:hidden; box-shadow:6px 6px 0 var(--dark); margin-bottom:32px; }
   .score-header-row { display:grid; grid-template-columns:40px 140px 1fr 120px; background:var(--dark); padding:8px 12px; align-items:center; gap:8px; }
   .score-team-label { font-family:'Fredoka One',cursive; font-size:13px; color:#aaa; }
-  .score-cells { display:grid; grid-template-columns:repeat(5,1fr); gap:4px; }
+  .score-cells { display:grid; grid-template-columns:repeat(6,1fr); gap:4px; }
+  .score-subtotal { color:var(--blue); font-size:17px; }
   .score-cell-label { font-family:'Fredoka One',cursive; font-size:15px; color:#aaa; text-align:center; }
   .score-row { display:grid; grid-template-columns:40px 140px 1fr 120px; padding:8px 12px; align-items:center; gap:8px; border-top:2px solid rgba(0,0,0,.1); background:#fff; }
   .score-row:nth-child(odd) { background:rgba(255,255,255,.6); }
@@ -212,6 +213,7 @@
         <div class="score-cell-label">🏖️</div>
         <div class="score-cell-label">💧</div>
         <div class="score-cell-label">🪵</div>
+        <div class="score-cell-label score-subtotal">Stand</div>
         <div class="score-cell-label">🤡</div>
         <div class="score-cell-label score-total">Totaal</div>
       </div>
@@ -225,6 +227,7 @@
         <div class="score-cell">30</div>
         <div class="score-cell">40</div>
         <div class="score-cell">0</div>
+        <div class="score-cell score-subtotal">70</div>
         <div class="score-cell">150</div>
         <div class="score-cell score-total">220</div>
       </div>
@@ -239,6 +242,7 @@
         <div class="score-cell">40</div>
         <div class="score-cell">30</div>
         <div class="score-cell">20</div>
+        <div class="score-cell score-subtotal">90</div>
         <div class="score-cell">75</div>
         <div class="score-cell score-total">165</div>
       </div>
@@ -253,6 +257,7 @@
         <div class="score-cell">50</div>
         <div class="score-cell">50</div>
         <div class="score-cell">20</div>
+        <div class="score-cell score-subtotal">120</div>
         <div class="score-cell">0</div>
         <div class="score-cell score-total">120</div>
       </div>
@@ -267,6 +272,7 @@
         <div class="score-cell">10</div>
         <div class="score-cell">10</div>
         <div class="score-cell">20</div>
+        <div class="score-cell score-subtotal">40</div>
         <div class="score-cell">75</div>
         <div class="score-cell score-total">115</div>
       </div>
@@ -281,6 +287,7 @@
         <div class="score-cell">20</div>
         <div class="score-cell">20</div>
         <div class="score-cell">0</div>
+        <div class="score-cell score-subtotal">40</div>
         <div class="score-cell">75</div>
         <div class="score-cell score-total">115</div>
       </div>
